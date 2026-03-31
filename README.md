@@ -1,7 +1,6 @@
-[README-.md](https://github.com/user-attachments/files/26384921/README-.md)
 ### Smart Vocabulary Path Finder
-### School of Computing Science and Engineering 
-**CSE Project Submission | VIT Bhopal University**
+**AIML Project Submission 
+**VIT Bhopal University
 
 **Professor:** Dr. MK Jayanthi  
 **Student:** Ahmad Salem Khan  
@@ -147,7 +146,7 @@ START
 
 ##  Learning Outcomes & Academic Reflections
 
-The development of **LEXI-PATH** provided deep practical exposure to several core domains of Computer Science and Engineering:
+The development of **Smart Vocabulary Path Finder** provided deep practical exposure to several core domains of Computer Science and Engineering:
 
 ### 1. State Space Search & Traversal
 * **Concept:** Mastered the implementation of **Level-Order Traversal** (BFS) to navigate a state-space.
