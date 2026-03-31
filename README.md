@@ -1,6 +1,6 @@
 ### Smart Vocabulary Path Finder
-**AIML Project Submission 
-**VIT Bhopal University
+**AIML Project Submission** 
+**VIT Bhopal University**
 
 **Professor:** Dr. MK Jayanthi  
 **Student:** Ahmad Salem Khan  
