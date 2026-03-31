@@ -1,8 +1,10 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
 from collections import deque
 
-# -------------------------------
 # Load Dictionary
-# -------------------------------
 def load_dictionary(file_path, word_length):
     words = set()
     try:
@@ -17,10 +19,7 @@ def load_dictionary(file_path, word_length):
 
     return words
 
-
-# -------------------------------
 # Generate Neighbors
-# -------------------------------
 def get_neighbors(word, word_set):
     neighbors = []
     alphabets = "abcdefghijklmnopqrstuvwxyz"
@@ -33,10 +32,7 @@ def get_neighbors(word, word_set):
 
     return neighbors
 
-
-# -------------------------------
 # BFS Algorithm
-# -------------------------------
 def bfs_word_ladder(start, goal, word_set):
     queue = deque([start])
     visited = set([start])
@@ -53,13 +49,9 @@ def bfs_word_ladder(start, goal, word_set):
                 visited.add(neighbor)
                 parent[neighbor] = current
                 queue.append(neighbor)
+ return None
 
-    return None
-
-
-# -------------------------------
 # Reconstruct Path
-# -------------------------------
 def reconstruct_path(parent, start, goal):
     if goal not in parent:
         return None
@@ -73,18 +65,13 @@ def reconstruct_path(parent, start, goal):
 
     path.reverse()
     return path
-
-
-# -------------------------------
 # Main Program
-# -------------------------------
 def main():
     print("\n Smart Vocabulary Path Finder \n")
 
     start = input("Enter start word: ").lower().strip()
     goal = input("Enter target word: ").lower().strip()
-
-    # Validation
+ # Validation
     if len(start) != len(goal):
         print(" Error: Words must be the same length!")
         return
@@ -93,19 +80,16 @@ def main():
         print(" Start and goal are the same!")
         print("Steps: 0")
         return
-
-    # Load dictionary
+# Load dictionary
     word_set = load_dictionary("words.txt", len(start))
 
     if start not in word_set:
         word_set.add(start)
     if goal not in word_set:
         word_set.add(goal)
-
-    # Run BFS
+ # Run BFS
     path = bfs_word_ladder(start, goal, word_set)
-
-    # Output
+# Output
     if path:
         print("\n Transformation found!")
         print(" → ".join(path))
@@ -113,9 +97,6 @@ def main():
     else:
         print("\n No valid transformation path found!")
 
-
-# -------------------------------
 # Run Program
-# -------------------------------
 if __name__ == "__main__":
     main()
